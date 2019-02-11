@@ -12,6 +12,8 @@
 		06E8F8E92211074D00F6B3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E8F8E72211074D00F6B3D4 /* Main.storyboard */; };
 		06E8F8EB2211074F00F6B3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E8F8EA2211074F00F6B3D4 /* Assets.xcassets */; };
 		06E8F8EE2211074F00F6B3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E8F8EC2211074F00F6B3D4 /* LaunchScreen.storyboard */; };
+		06E8F8FD2211116500F6B3D4 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E8F8FC2211116500F6B3D4 /* CircleButton.swift */; };
+		06E8F8FF22111C7800F6B3D4 /* New Recording 3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 06E8F8FE22111C7800F6B3D4 /* New Recording 3.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		06E8F8EA2211074F00F6B3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06E8F8ED2211074F00F6B3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06E8F8EF2211074F00F6B3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06E8F8FC2211116500F6B3D4 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		06E8F8FE22111C7800F6B3D4 /* New Recording 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "New Recording 3.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,10 @@
 		06E8F8E22211074D00F6B3D4 /* SpeechAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				06E8F90022111C8C00F6B3D4 /* Resources */,
+				06E8F8FB221110C300F6B3D4 /* Model */,
+				06E8F8F9221110B600F6B3D4 /* View */,
+				06E8F8FA221110BB00F6B3D4 /* Controller */,
 				06E8F8E32211074D00F6B3D4 /* AppDelegate.swift */,
 				06E8F8E52211074D00F6B3D4 /* ViewController.swift */,
 				06E8F8E72211074D00F6B3D4 /* Main.storyboard */,
@@ -62,6 +70,37 @@
 				06E8F8EF2211074F00F6B3D4 /* Info.plist */,
 			);
 			path = SpeechAnalyzer;
+			sourceTree = "<group>";
+		};
+		06E8F8F9221110B600F6B3D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06E8F8FC2211116500F6B3D4 /* CircleButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06E8F8FA221110BB00F6B3D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		06E8F8FB221110C300F6B3D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		06E8F90022111C8C00F6B3D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06E8F8FE22111C7800F6B3D4 /* New Recording 3.m4a */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06E8F8EE2211074F00F6B3D4 /* LaunchScreen.storyboard in Resources */,
+				06E8F8FF22111C7800F6B3D4 /* New Recording 3.m4a in Resources */,
 				06E8F8EB2211074F00F6B3D4 /* Assets.xcassets in Resources */,
 				06E8F8E92211074D00F6B3D4 /* Main.storyboard in Resources */,
 			);
@@ -135,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E8F8FD2211116500F6B3D4 /* CircleButton.swift in Sources */,
 				06E8F8E62211074D00F6B3D4 /* ViewController.swift in Sources */,
 				06E8F8E42211074D00F6B3D4 /* AppDelegate.swift in Sources */,
 			);

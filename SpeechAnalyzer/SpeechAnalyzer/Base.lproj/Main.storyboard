@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEu-b4-sUU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speech Analyzer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLJ-ox-mnc">
+                                        <rect key="frame" x="76" y="45" width="222" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="Mr0-5R-euE"/>
+                                    <constraint firstItem="HLJ-ox-mnc" firstAttribute="centerY" secondItem="CEu-b4-sUU" secondAttribute="centerY" id="pOL-HM-tl6"/>
+                                    <constraint firstItem="HLJ-ox-mnc" firstAttribute="centerX" secondItem="CEu-b4-sUU" secondAttribute="centerX" id="srT-p9-N07"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa9-I3-GEO" customClass="CircleButton" customModule="SpeechAnalyzer" customModuleProvider="target">
+                                <rect key="frame" x="155" y="641" width="65" height="65"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Ls2-Zg-cTQ"/>
+                                    <constraint firstAttribute="width" constant="65" id="qCd-ft-trT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcm-Ng-raD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAB-x7-VSb">
+                                <rect key="frame" x="86" y="729" width="203" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to transcribe the audio file" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9gp-nA-v6Z">
+                                <rect key="frame" x="20" y="113" width="335" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MWW-sK-03I">
+                                <rect key="frame" x="155" y="641" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="ipd-X6-d06"/>
+                                    <constraint firstAttribute="height" constant="65" id="r5e-VW-uGg"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qa9-I3-GEO" firstAttribute="top" secondItem="9gp-nA-v6Z" secondAttribute="bottom" constant="20" id="9In-yt-wMh"/>
+                            <constraint firstItem="MWW-sK-03I" firstAttribute="centerY" secondItem="qa9-I3-GEO" secondAttribute="centerY" id="BPf-N0-ewS"/>
+                            <constraint firstItem="qa9-I3-GEO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GBp-rR-Ft7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9gp-nA-v6Z" secondAttribute="trailing" constant="20" id="Gg2-Za-058"/>
+                            <constraint firstItem="9gp-nA-v6Z" firstAttribute="top" secondItem="CEu-b4-sUU" secondAttribute="bottom" constant="20" id="I6j-Me-Wid"/>
+                            <constraint firstItem="OAB-x7-VSb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JkL-IC-JlG"/>
+                            <constraint firstItem="OAB-x7-VSb" firstAttribute="top" secondItem="qa9-I3-GEO" secondAttribute="bottom" constant="23" id="PWU-kR-tcM"/>
+                            <constraint firstItem="CEu-b4-sUU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RFQ-p6-BcL"/>
+                            <constraint firstItem="CEu-b4-sUU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UWF-jF-6AN"/>
+                            <constraint firstItem="MWW-sK-03I" firstAttribute="centerX" secondItem="qa9-I3-GEO" secondAttribute="centerX" id="Y6u-32-wi7"/>
+                            <constraint firstItem="CEu-b4-sUU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kAv-fO-G9J"/>
+                            <constraint firstItem="9gp-nA-v6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nwp-Zm-hdX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OAB-x7-VSb" secondAttribute="bottom" constant="20" id="riu-Ko-If2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="MWW-sK-03I" id="f2e-G9-oqL"/>
+                        <outlet property="transcriptionTextfield" destination="9gp-nA-v6Z" id="MdM-bX-cuv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-84" y="132.26600985221674"/>
         </scene>
     </scenes>
 </document>
